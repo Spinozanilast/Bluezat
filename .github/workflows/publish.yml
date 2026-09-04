@@ -9,6 +9,8 @@ on:
 jobs:
   build-and-publish:
     permissions:
+      contents: read
+      packages: write
       id-token: write
 
     runs-on: ubuntu-latest
@@ -30,7 +32,6 @@ jobs:
 
       - name: Push to NuGet
         if: startsWith(github.ref, 'refs/tags/')
-        shell: bash
         run: |
           for nupkg in artifacts/*.nupkg; do
             [ -f "$nupkg" ] || continue
@@ -39,12 +40,14 @@ jobs:
               --source https://api.nuget.org/v3/index.json \
               --skip-duplicate
           done
-      - name: Push to Github
-        shell: bash
+
+      - name: Push to GitHub Packages
+        if: startsWith(github.ref, 'refs/tags/')
         run: |
           for nupkg in artifacts/*.nupkg; do
             [ -f "$nupkg" ] || continue
             dotnet nuget push "$nupkg" \
-              --source "https://nuget.pkg.github.com/Spinozanilsat/index.json" \
-              --api-key "${{ secrets.GITHUB_TOKEN }}"
+              --source "https://nuget.pkg.github.com/Spinozanilast/index.json" \
+              --api-key "${{ secrets.GITHUB_TOKEN }}" \
+              --skip-duplicate
           done

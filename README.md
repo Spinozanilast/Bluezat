@@ -1,10 +1,18 @@
-<div align="center">
-  <img src=".github/poster.jpg" alt="Description">
-  <h1>Bluezat</h1>
-  <p>A successor of <a href="https://github.com/hashtagchris/DotNet-BlueZ">DotNet-BlueZ</a> library, boosted by Tmds.DBus.Protocol use instead of Tmds.DBus to get all the pros of NativeAOT/trimming features of newer .NET environments</p>
-</div>
+![Bluezat](https://raw.githubusercontent.com/Spinozanilast/Bluezat/main/.github/poster.jpg)
 
----
+# Bluezat
 
-Uses **Tmds.DBus.Protocol** _(watch [api](https://tmds.github.io/Tmds.DBus/api/Tmds.DBus.Protocol/Tmds.DBus.Protocol.html))_ to access D-Bus. 
-**Tmds.DBus.Tool** was used to generate the D-Bus object interfaces.
+> A successor of the [DotNet-BlueZ](https://github.com/hashtagchris/DotNet-BlueZ) library, boosted by using `Tmds.DBus.Protocol` instead of `Tmds.DBus` to get all the benefits of NativeAOT and trimming in modern .NET.
+
+Bluezat gives you a strongly typed, event-driven way to talk to the [BlueZ](https://github.com/bluez/bluez) D-Bus API on Linux. It uses **Tmds.DBus.Protocol** to access D-Bus and the object interfaces are generated with **Tmds.DBus.Tool**.
+
+## Installation
+
+```bash
+dotnet add package Spinozanilast.Bluezat
+```
+Requires **.NET 7 or later** and a Linux system with BlueZ running.
+
+## License
+
+[MIT](https://github.com/Spinozanilast/Bluezat/blob/main/LICENSE)

@@ -15,7 +15,7 @@
         <PackageIcon>icon.png</PackageIcon>
         <RepositoryUrl>https://github.com/spinozanilast/Bluezat</RepositoryUrl>
         <PackageTags>Bluez,DBus,Linux</PackageTags>
-        <PackageProjectUrl>spinozanilast.vercel.app</PackageProjectUrl>
+        <PackageProjectUrl>https://spinozanilast.vercel.app</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <LangVersion>latestmajor</LangVersion>
         <RootNamespace>Bluez</RootNamespace>
