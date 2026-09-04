@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <PackageId>Spinozanilast.Bluezat</PackageId>
+        <Version>0.1.0</Version>
+        <Authors>Vadim Budchanin</Authors>
+        <Company>Spinozanilast</Company>
+        <Description>.NET library for BlueZ's D-Bus APIs based on Tmds.DBus.Protocol (Supports NativeAOT)</Description>
+        <Title>Bluezat</Title>
+        <Copyright>Copyright © Spinozanilast</Copyright>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/spinozanilast/Bluezat</RepositoryUrl>
+        <PackageTags>Bluez,DBus,Linux</PackageTags>
+        <PackageProjectUrl>spinozanilast.vercel.app</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <LangVersion>latestmajor</LangVersion>
+        <RootNamespace>Bluez</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Tmds.DBus.Protocol" Version="0.95.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+        <None Include="../README.md">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
+</Project>
