@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
 
         <PackageId>Spinozanilast.Bluezat</PackageId>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <Authors>Vadim Budchanin</Authors>
         <Company>Spinozanilast</Company>
         <Description>.NET library for BlueZ's D-Bus APIs based on Tmds.DBus.Protocol (Supports NativeAOT)</Description>

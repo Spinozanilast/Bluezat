@@ -14,5 +14,4 @@ dotnet add package Spinozanilast.Bluezat
 Requires **.NET 7 or later** and a Linux system with BlueZ running.
 
 ## License
-
 [MIT](https://github.com/Spinozanilast/Bluezat/blob/main/LICENSE)
