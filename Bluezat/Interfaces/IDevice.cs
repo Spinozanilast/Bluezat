@@ -22,6 +22,7 @@ public interface IDevice : IDBusObject
     Task<string> GetNameAsync();
     Task<string> GetAliasAsync();
     Task<uint> GetClassAsync();
+    Task<byte> GetBatteryPercentageAsync();
     Task<ushort> GetAppearanceAsync();
     Task<string> GetIconAsync();
     Task<bool> GetPairedAsync();
@@ -46,6 +47,9 @@ public interface IDevice : IDBusObject
     Task<DeviceProperties> GetPropertiesAsync();
     Task<INullableDeviceProperties> GetNullablePropertiesAsync();
 
-    ValueTask<IDisposable> WatchDisconnectedAsync(Action<(string Name, string Message)> handler, bool emitOnCapturedContext = true);
-    ValueTask<IDisposable> WatchPropertiesChangedAsync(Action<IChangedDeviceProperties> handler, bool emitOnCapturedContext = true);
+    ValueTask<IDisposable> WatchDisconnectedAsync(Action<(string Name, string Message)> handler,
+        bool emitOnCapturedContext = true);
+
+    ValueTask<IDisposable> WatchPropertiesChangedAsync(Action<IChangedDeviceProperties> handler,
+        bool emitOnCapturedContext = true);
 }

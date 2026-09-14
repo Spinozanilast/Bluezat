@@ -147,6 +147,11 @@ public class Device : IDevice, IDisposable
         return _device.GetAppearanceAsync();
     }
 
+    public Task<byte> GetBatteryPercentageAsync()
+    {
+        return _device.GetBatteryPercentageAsync();
+    }
+
     public Task<string> GetIconAsync()
     {
         return _device.GetIconAsync();
